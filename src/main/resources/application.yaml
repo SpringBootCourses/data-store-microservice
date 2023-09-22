@@ -1,0 +1,5 @@
+spring:
+  config:
+    import: optional:file:.env[.properties]
+server:
+  port: 8083

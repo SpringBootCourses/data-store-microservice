@@ -1,2 +1,2 @@
-# data-store
-This is data provider microservice for YouTube course.
+# data-store-microservice
+This is data store microservice for YouTube course.
