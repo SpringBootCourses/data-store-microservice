@@ -5,13 +5,14 @@ import com.example.datastore.model.Summary;
 import com.example.datastore.model.SummaryType;
 
 import java.util.Optional;
+import java.util.Set;
 
 public interface SummaryRepository {
 
     Optional<Summary> findBySensorId(
             long sensorId,
-            MeasurementType measurementType,
-            SummaryType summaryType
+            Set<MeasurementType> measurementTypes,
+            Set<SummaryType> summaryTypes
     );
 
 }
