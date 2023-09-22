@@ -2,7 +2,6 @@ package com.example.datastore.web.controller;
 
 import com.example.datastore.model.MeasurementType;
 import com.example.datastore.model.Summary;
-import com.example.datastore.model.SummaryCriteria;
 import com.example.datastore.model.SummaryType;
 import com.example.datastore.service.SummaryService;
 import com.example.datastore.web.dto.SummaryDto;
@@ -13,6 +12,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Set;
 
 @RestController
 @RequestMapping("/api/v1/analytics")
@@ -26,15 +27,15 @@ public class AnalyticsController {
     @GetMapping("/summary/{sensorId}")
     public SummaryDto getSummary(
             @PathVariable long sensorId,
-            @RequestParam("measurementType") MeasurementType measurementType,
-            @RequestParam("summaryType") SummaryType summaryType
+            @RequestParam(value = "mt", required = false)
+            Set<MeasurementType> measurementTypes,
+            @RequestParam(value = "st", required = false)
+            Set<SummaryType> summaryTypes
     ) {
         Summary summary = summaryService.get(
                 sensorId,
-                SummaryCriteria.builder()
-                        .measurementType(measurementType)
-                        .summaryType(summaryType)
-                        .build()
+                measurementTypes,
+                summaryTypes
         );
         return summaryMapper.toDto(summary);
     }

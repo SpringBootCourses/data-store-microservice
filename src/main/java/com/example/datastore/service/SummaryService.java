@@ -1,10 +1,17 @@
 package com.example.datastore.service;
 
+import com.example.datastore.model.MeasurementType;
 import com.example.datastore.model.Summary;
-import com.example.datastore.model.SummaryCriteria;
+import com.example.datastore.model.SummaryType;
+
+import java.util.Set;
 
 public interface SummaryService {
 
-    Summary get(Long sensorId, SummaryCriteria criteria);
+    Summary get(
+            Long sensorId,
+            Set<MeasurementType> measurementTypes,
+            Set<SummaryType> summaryTypes
+    );
 
 }

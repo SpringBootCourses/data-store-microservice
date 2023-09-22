@@ -22,6 +22,7 @@
         <java.version>17</java.version>
         <lombok.version>1.18.28</lombok.version>
         <mapstruct.version>1.5.5.Final</mapstruct.version>
+        <jedis.version>5.0.0</jedis.version>
     </properties>
 
     <dependencies>
@@ -35,6 +36,12 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
             <version>${lombok.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>${jedis.version}</version>
         </dependency>
 
         <dependency>
