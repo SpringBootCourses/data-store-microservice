@@ -1,0 +1,44 @@
+{
+  "schema": {
+    "type": "struct",
+    "fields": [
+      {
+        "type": "int64",
+        "optional": false,
+        "default": 0,
+        "field": "id"
+      },
+      {
+        "type": "int64",
+        "optional": false,
+        "field": "sensor_id"
+      },
+      {
+        "type": "int64",
+        "optional": false,
+        "name": "io.debezium.time.MicroTimestamp",
+        "version": 1,
+        "field": "timestamp"
+      },
+      {
+        "type": "double",
+        "optional": false,
+        "field": "measurement"
+      },
+      {
+        "type": "string",
+        "optional": false,
+        "field": "type"
+      }
+    ],
+    "optional": false,
+    "name": "pg-replica.public.data.Value"
+  },
+  "payload": {
+    "id": 66,
+    "sensor_id": 1,
+    "timestamp": 1694607005000000,
+    "measurement": 12.5,
+    "type": "TEMPERATURE"
+  }
+}
