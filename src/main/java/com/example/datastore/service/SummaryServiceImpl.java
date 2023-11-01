@@ -35,7 +35,7 @@ public class SummaryServiceImpl implements SummaryService {
     public void handle(
             Data data
     ) {
-        //TODO handle
+        summaryRepository.handle(data);
     }
 
 }
