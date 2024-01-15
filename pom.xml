@@ -23,7 +23,7 @@
         <lombok.version>1.18.30</lombok.version>
         <mapstruct.version>1.5.5.Final</mapstruct.version>
         <jedis.version>5.1.0</jedis.version>
-        <spring-kafka.version>3.0.12</spring-kafka.version>
+        <spring-kafka.version>3.1.1</spring-kafka.version>
     </properties>
 
     <dependencies>
