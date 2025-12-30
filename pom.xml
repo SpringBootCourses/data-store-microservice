@@ -14,16 +14,15 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.2.5</version>
+        <version>3.5.9</version>
         <relativePath/>
     </parent>
 
     <properties>
         <java.version>17</java.version>
-        <lombok.version>1.18.32</lombok.version>
-        <mapstruct.version>1.5.5.Final</mapstruct.version>
-        <jedis.version>5.1.2</jedis.version>
-        <spring-kafka.version>3.1.4</spring-kafka.version>
+        <mapstruct.version>1.6.3</mapstruct.version>
+        <jedis.version>7.2.0</jedis.version>
+        <spring-kafka.version>3.3.11</spring-kafka.version>
     </properties>
 
     <dependencies>
@@ -36,7 +35,6 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
-            <version>${lombok.version}</version>
         </dependency>
 
         <dependency>
